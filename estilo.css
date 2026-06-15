@@ -1,0 +1,99 @@
+/* Configuração Geral do Sistema */
+body {
+    background-color: #0a0f1d;
+    color: #00e5ff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cabeçalho */
+header {
+    border-bottom: 2px solid #00e5ff;
+    padding-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 8px #00e5ff;
+}
+
+/* Área de Comandos */
+.painel-comandos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0, 229, 255, 0.05);
+    padding: 15px;
+    border: 1px solid #00e5ff;
+    border-radius: 5px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    background-color: #121829;
+    border: 1px solid #005f73;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #00e5ff;
+    box-shadow: 0 0 8px #00e5ff;
+}
+
+/* Botão Interativo com efeito */
+.btn-executar {
+    background-color: #00e5ff;
+    color: #0a0f1d;
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-executar:active, .btn-executar:hover {
+    background-color: #fff;
+    box-shadow: 0 0 15px #fff;
+}
+
+/* Tabela de Monitorização */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+th, td {
+    border: 1px solid #005f73;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: rgba(0, 229, 255, 0.1);
+    color: #fff;
+}
+
+.status-ok {
+    color: #00ff66;
+    font-weight: bold;
+}

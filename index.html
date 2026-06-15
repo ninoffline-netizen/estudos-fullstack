@@ -1,10 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Minha Jornada Full Stack</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle Principal</title>
+    
+    <link rel="stylesheet" href="estilo.css">
+    
 </head>
 <body>
-    <h1>Sistema Atualizado!</h1>
-    <p>Este é meu primeiro arquivo criado no Acode e enviado via Termux.</p>
+
+    <header>
+        <h1>SISTEMA ONLINE</h1>
+        <small>DIAGNOSTICO COGNITIVO // TERMINAL ATIVO</small>
+    </header>
+
+    <main class="painel-comandos">
+        <label>> INSERIR DIRETRIZ DE ACESSO:</label>
+        <input type="text" placeholder="Digite o comando aqui...">
+        <button class="btn-executar">EXECUTAR COMANDO</button>
+    </main>
+
+    <section style="background: rgba(0,0,0,0.2); padding: 10px; border-radius: 5px;">
+        <h3 style="margin-top:0; font-size:1rem;">MONITORIZAÇÃO DO SERVIDOR</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>MÓDULO</th>
+                    <th>VERSÃO</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Core.Engine</td>
+                    <td>v1.0.4</td>
+                    <td class="status-ok">ESTÁVEL</td>
+                </tr>
+                <tr>
+                    <td>Git.Bridge</td>
+                    <td>v2.4.1</td>
+                    <td class="status-ok">CONECTADO</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        const botao = document.querySelector('.btn-executar');
+        const caixaTexto = document.querySelector('input[type="text"]');
+
+        botao.addEventListener('click', function() {
+            const comando = caixaTexto.value.trim();
+
+            if (comando === "") {
+                alert("ERRO: Nenhuma diretriz foi inserida no terminal.");
+            } 
+            else if (comando.toLowerCase() === "ajuda") {
+                alert("DIRETRIZES DISPONÍVEIS:\n- status\n- limpar\n- ajuda");
+            }
+            else {
+                alert("PROCESSANDO DIRETRIZ: '" + comando + "'...\nAcesso concedido pelo sistema!");
+                caixaTexto.value = "";
+            }
+        });
+    </script>
+
 </body>
 </html>
